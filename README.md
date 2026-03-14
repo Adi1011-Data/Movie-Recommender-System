@@ -8,7 +8,6 @@ To generate them:
    -Run all the cells in the notebook.
    -At the final step, the notebook will create the required .pkl files inside the models folder.
    -After the models are generated, you can run the Flask application.
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 A content-based movie recommendation system built using Python and Flask.
 
 The application recommends similar movies based on their features such as genres, keywords, cast, crew, and movie overview.
