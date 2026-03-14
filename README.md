@@ -1,8 +1,17 @@
 # Movie Recommender System
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Model File
+The trained model file `similarity.pkl` is not included in this repository 
+because it exceeds GitHub's file size limit.
+To generate them:
+   -Open the notebook movie_recommender.ipynb.
+   -Run all the cells in the notebook.
+   -At the final step, the notebook will create the required .pkl files inside the models folder.
+   -After the models are generated, you can run the Flask application.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 A content-based movie recommendation system built using Python and Flask.
-The application recommends similar movies based on their features such as genres, keywords, cast, crew, and movie overview.
 
+The application recommends similar movies based on their features such as genres, keywords, cast, crew, and movie overview.
 Users can search for a movie and receive the top recommended movies based on similarity scores.
 
 Features:
