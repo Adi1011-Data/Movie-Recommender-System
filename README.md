@@ -1,6 +1,6 @@
 # Movie Recommender System
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Model File
+-> Model File
 The trained model file `similarity.pkl` is not included in this repository 
 because it exceeds GitHub's file size limit.
 To generate them:
