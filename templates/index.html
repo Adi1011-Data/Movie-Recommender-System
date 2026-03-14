@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Movie Recommender</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+
+  <body>
+    <h1>Movie Recommendation System</h1>
+
+    <input type="text" id="search" placeholder="Search movie..." />
+
+    <div id="suggestions"></div>
+
+    <button onclick="getRecommendations()">Recommend</button>
+
+    <ul id="results"></ul>
+
+    <script>
+      const input = document.getElementById("search");
+      const suggestionBox = document.getElementById("suggestions");
+
+      input.addEventListener("keyup", function () {
+        fetch("/suggest?q=" + input.value)
+          .then((res) => res.json())
+
+          .then((data) => {
+            suggestionBox.innerHTML = "";
+
+            data.forEach((movie) => {
+              let div = document.createElement("div");
+              div.innerHTML = movie;
+
+              div.onclick = () => {
+                input.value = movie;
+                suggestionBox.innerHTML = "";
+              };
+
+              suggestionBox.appendChild(div);
+            });
+          });
+      });
+
+      function getRecommendations() {
+        fetch("/recommend?q=" + input.value)
+          .then((res) => res.json())
+
+          .then((data) => {
+            let results = document.getElementById("results");
+
+            results.innerHTML = "";
+
+            data.forEach((movie) => {
+              let li = document.createElement("li");
+
+              li.innerHTML = movie;
+
+              results.appendChild(li);
+            });
+          });
+      }
+    </script>
+  </body>
+</html>
