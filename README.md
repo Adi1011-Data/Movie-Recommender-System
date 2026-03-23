@@ -69,85 +69,86 @@ Fast recommendation using precomputed similarity matrix
 
 4.Machine Learning Approach
 
-    The project uses Content-Based Filtering.
+ The project uses Content-Based Filtering.
 
-    Steps used in the recommendation pipeline:
+ Steps used in the recommendation pipeline:
 
-    -Merge movies and credits datasets
-    -Select relevant features
-    -Clean and preprocess text data
-    -Extract important information such as:
-        -genres
-        -keywords
-        -top cast members
-        -director
-    -Combine these features into a single column called tags
-    -Convert text data into vectors using CountVectorizer
-    -Compute cosine similarity between movie vectors
-    -Recommend movies with highest similarity scores
+ -Merge movies and credits datasets
+ -Select relevant features
+ -Clean and preprocess text data
+ -Extract important information such as:
+     -genres
+     -keywords
+     -top cast members
+     -director
+ -Combine these features into a single column called tags
+ -Convert text data into vectors using CountVectorizer
+ -Compute cosine similarity between movie vectors
+ -Recommend movies with highest similarity scores
 
-    Cosine similarity measures how similar two movie vectors are.
+ Cosine similarity measures how similar two movie vectors are.
 
 5.Recommendation Pipeline
 
-    Dataset Loading
-    ↓
-    Data Cleaning
-    ↓
-    Feature Extraction
-    ↓
-    Tag Creation
-    ↓
-    Text Vectorization
-    ↓
-    Similarity Matrix Calculation
-    ↓
-    Model Saving (Pickle)
-    ↓
-    Flask Web Application
+ Dataset Loading
+ ↓
+ Data Cleaning
+ ↓
+ Feature Extraction
+ ↓
+ Tag Creation
+ ↓
+ Text Vectorization
+ ↓
+ Similarity Matrix Calculation
+ ↓
+ Model Saving (Pickle)
+ ↓
+ Flask Web Application
 
 6.  Model Files
 
-    The trained data is saved using pickle.
+ The trained data is saved using pickle.
 
-    movies.pkl
-    Contains the processed movie dataset.
+ movies.pkl
+ Contains the processed movie dataset.
 
-    similarity.pkl
-    Contains the cosine similarity matrix.
+ similarity.pkl
+ Contains the cosine similarity matrix.
 
-    These files allow the web app to generate recommendations instantly without retraining.
+ These files allow the web app to generate recommendations instantly without retraining.
 
 7.  Installation
 
-    Clone the repository
+ Clone the repository
 
-         git clone
+      git clone
 
-    Navigate into the project directory
+ Navigate into the project directory
 
-         cd movie-Recommender-system
+      cd movie-Recommender-system
 
-    Create a virtual environment
+ Create a virtual environment
 
-         python -m venv MovieRecommender
+      python -m venv MovieRecommender
 
-    Activate the virtual environment
+ Activate the virtual environment
 
-    Windows:
-    MovieRecommender\Scripts\activate
+ Windows:
 
-    Install dependencies
+      MovieRecommender\Scripts\activate
 
-         pip install -r requirements.txt
+ Install dependencies
 
-8.  Learning Outcomes
+      pip install -r requirements.txt
+
+9.  Learning Outcomes
 
 This project demonstrates:
 
-    Building a recommender system
-    Feature engineering for NLP data
-    Vectorization of text data
-    Similarity based recommendation algorithms
-    Backend development using Flask
-    Building a simple web interface for machine learning models
+ Building a recommender system
+ Feature engineering for NLP data
+ Vectorization of text data
+ Similarity based recommendation algorithms
+ Backend development using Flask
+ Building a simple web interface for machine learning models
